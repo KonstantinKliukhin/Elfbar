@@ -1,5 +1,5 @@
 node_modules/
 .jshintrc
 .cache/
-/dist
+# /dist
 webpack.config.js
