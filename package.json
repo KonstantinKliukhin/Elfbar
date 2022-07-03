@@ -4,12 +4,30 @@
   "description": "elfbar shop",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "build": "C:/Users/USER/Desktop/Pets/Elfbar/node_modules/.bin/webpack"
   },
   "repository": {
     "type": "git",
     "url": "elfbar"
   },
   "author": "",
-  "license": "ISC"
+  "license": "ISC",
+  "browserslist": [
+    ">1%"
+  ],
+  "devDependencies": {
+    "@babel/cli": "^7.17.6",
+    "@babel/core": "^7.17.9",
+    "@babel/preset-env": "^7.16.11",
+    "babel-loader": "^8.2.5",
+    "html-loader": "^3.1.2",
+    "html-webpack-plugin": "^5.5.0",
+    "mini-css-extract-plugin": "^2.6.0",
+    "parcel-bundler": "^1.12.5",
+    "webpack": "^5.72.0",
+    "webpack-cli": "^4.9.2"
+  },
+  "dependencies": {
+    "babel": "^6.23.0"
+  }
 }

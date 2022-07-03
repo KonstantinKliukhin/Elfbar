@@ -9,28 +9,40 @@
     <link rel="stylesheet" href="./css/normalize.css">
 </head>
 <body>
-    <header class="black">
-        <nav class="container header__nav">
+    <header class="container">
+        <nav class="header__nav container">
             <img class="icon nav__logo" src="./images/logo/elfbarlogo.gif" alt="logo">
             <ul class="list nav__list">
-                <li class="nav__item"><a href="#">Subscibe</a></li>
-                <li class="nav__item nav__item-active"><a href="#">Availability</a></li>
-                <li class="nav__item"><a href="#">Contact us</a></li>
-                <li class="nav__item"><a href="#">About us</a></li>
+                <li class="nav__item"><a href="#subscribe">Subscibe</a></li>
+                <li class="nav__item nav__item-active"><a href="#availability">Availability</a></li>
+                <li class="nav__item"><a href="#contact">Contact us</a></li>
+                <li class="nav__item"><a href="#comments">Comments</a></li>
             </ul>
             <img class="icon nav__burger-icon" src="./images/other/burger.png" alt="burger menu">
         </nav>
     </header>
     <main>
-        <section class="hero container">
+        <section class="hero container" id="subscribe">
             <div class="hero__heading-wrapper">
                 <h1 class="hero__heading">SMOKE ZONE</h1>
             </div>
             <div class="hero__image-wrapper">
-                <img class="hero__img" src="./images/other/hero/heroelf@2x.jpg" alt="elf">
+                <picture>
+                    <source 
+                    type="image/webp" 
+                    srcset="images/other/hero/heroelf_2x.webp 1x, images/other/hero/heroelf_1x.webp 2x"
+                    />
+                    <source 
+                    type="image/jpg" 
+                    srcset="images/other/hero/heroelf@2x.jpg 1x, images/other/hero/heroelf@1x.jpg 2x"
+                    />
+                    <img class="hero__img" src="images/other/hero/heroelf@2x.jpg" alt="elf">
+                </picture>
             </div>
             <div class="hero__content">
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Earum, corrupti incidunt? Ut nesciunt at dolorum blanditiis quia architecto aperiam facilis ipsa. Ut doloremque voluptate nostrum ratione laudantium id, cupiditate nulla. Molestias qui quas minima ducimus in sequi officiis nam mollitia dolores? Sunt in officia quasi sapiente numquam totam aliquid nulla?</p>
+                <p>
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Earum, corrupti incidunt? Ut nesciunt at dolorum blanditiis quia architecto aperiam facilis ipsa. Ut doloremque voluptate nostrum ratione laudantium id, cupiditate nulla. Molestias qui quas minima ducimus in sequi officiis nam mollitia dolores? Sunt in officia quasi sapiente numquam totam aliquid nulla?
+                </p>
                 <button class="hero__btn btn">
                     <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-telegram" viewBox="0 0 16 16">
                         <path d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0zM8.287 5.906c-.778.324-2.334.994-4.666 2.01-.378.15-.577.298-.595.442-.03.243.275.339.69.47l.175.055c.408.133.958.288 1.243.294.26.006.549-.1.868-.32 2.179-1.471 3.304-2.214 3.374-2.23.05-.012.12-.026.166.016.047.041.042.12.037.141-.03.129-1.227 1.241-1.846 1.817-.193.18-.33.307-.358.336a8.154 8.154 0 0 1-.188.186c-.38.366-.664.64.015 1.088.327.216.589.393.85.571.284.194.568.387.936.629.093.06.183.125.27.187.331.236.63.448.997.414.214-.02.435-.22.547-.82.265-1.417.786-4.486.906-5.751a1.426 1.426 0 0 0-.013-.315.337.337 0 0 0-.114-.217.526.526 0 0 0-.31-.093c-.3.005-.763.166-2.984 1.09z"/>
@@ -38,16 +50,15 @@
                     Subscibe us</button>
             </div>
         </section>
-        <section class="products">
+        <section class="products" id="availability">
             <div class="products__cardfield container">
                 <div class="products__card">
-                    <div class="card__slider-wrapper">
-                        <div class="card__image-wrapper">
+                    <div class="slider-wrapper">
+                        <div class="slider__image-wrapper">
                             <div class="slider">
-                                <img src="./images/cards/elfbar4.jpg" alt="" class="card__image">
-                                <img src="./images/cards/elfbar4.jpg" alt="" class="card__image">
-                                <img src="./images/cards/elfbar4.jpg" alt="" class="card__image">
-                                <img src="./images/cards/elfbar4.jpg" alt="" class="card__image">
+                                <img src="./images/cards/1500lux/elfbar1500lux_1.webp" alt="elfbar" class="slider__image">
+                                <img src="./images/cards/1500lux/elfbar1500lux_2.webp" alt="elfbar" class="slider__image">
+                                <img src="./images/cards/1500lux/elfbar1500lux_3.webp" alt="elfbar" class="slider__image">
                             </div>
                         </div>
                         <img src="./images/cards/arrow.png" alt="" class="arrow-right">
@@ -55,104 +66,156 @@
                     </div>
                     <div class="card__content">
                         <h4 class="card__heading">Elf bar 1500 lux 5%</h4>
-                        <ul class="card__list">
+                        <ul class="card__list tick-list">
                             <li>Аккумулятор - 850мАч</li>
                             <li>Кол-Во затяжек - 1500</li>
-                            <li>Картридж - 4,8 мл</li>
+                            <li>Картридж - 4,8мл</li>
                             <li>Тип - одноразовые</li>
                         </ul>
                         <p class="card__price">520$</p>
-                        <button class="card__btn btn">расчитать</button>
+                        <div class="card__btn-wrapper">
+                            <a class="card__btn btn" href="#hero">Заказать</a>
+                            <button class="card__btn btn">Наличие</button>
+                        </div>
                     </div>
                 </div>
                 <div class="products__card">
-                    <div class="card__slider-wrapper">
-                        <div class="card__image-wrapper">
+                    <div class="slider-wrapper">
+                        <div class="slider__image-wrapper">
                             <div class="slider">
-                                <img src="./images/cards/elfbar4.jpg" alt="" class="card__image">
-                                <img src="./images/cards/elfbar4.jpg" alt="" class="card__image">
-                                <img src="./images/cards/elfbar4.jpg" alt="" class="card__image">
-                                <img src="./images/cards/elfbar4.jpg" alt="" class="card__image">
+                                <img src="./images/cards/1800NC/elfbar1800NC_1.webp" alt="elfbar" class="slider__image">
+                                <img src="./images/cards/1800NC/elfbar1800NC_2.webp" alt="elfbar" class="slider__image">
+                                <img src="./images/cards/1800NC/elfbar1800NC_3.webp" alt="elfbar" class="slider__image">
                             </div>
                         </div>
                         <img src="./images/cards/arrow.png" alt="" class="arrow-right">
                         <img src="./images/cards/arrow.png" alt="" class="arrow-left">
                     </div>
                     <div class="card__content">
-                        <h4 class="card__heading">Elf bar 1500 lux 5%</h4>
-                        <ul class="card__list">
-                            <li>Аккумулятор - 850мАч</li>
-                            <li>Кол-Во затяжек - 1500</li>
-                            <li>Картридж - 4,8 мл</li>
+                        <h4 class="card__heading">Elf bar NC 1800 5%</h4>
+                        <ul class="card__list tick-list">
+                            <li>Аккумулятор - 950мАч</li>
+                            <li>Кол-Во затяжек - 1800</li>
+                            <li>Картридж - 6мл</li>
                             <li>Тип - одноразовые</li>
                         </ul>
                         <p class="card__price">520$</p>
-                        <button class="card__btn btn">расчитать</button>
+                        <div class="card__btn-wrapper">
+                            <a class="card__btn btn" href="#hero">Заказать</a>
+                            <button class="card__btn btn">Наличие</button>
+                        </div>
                     </div>
                 </div>
                 <div class="products__card">
-                    <div class="card__slider-wrapper">
-                        <div class="card__image-wrapper">
+                    <div class="slider-wrapper">
+                        <div class="slider__image-wrapper">
                             <div class="slider">
-                                <img src="./images/cards/elfbar1.jpg" alt="" class="card__image">
-                                <img src="./images/cards/elfbar2.jpg" alt="" class="card__image">
-                                <img src="./images/cards/elfbar3.webp" alt="" class="card__image">
-                                <img src="./images/cards/elfbar4.jpg" alt="" class="card__image">
+                                <img src="./images/cards/2000DPD/elfbar2000DPD_1.webp" alt="elfbar" class="slider__image">
+                                <img src="./images/cards/2000DPD/elfbar2000DPD_2.webp" alt="elfbar" class="slider__image">
+                                <img src="./images/cards/2000DPD/elfbar2000DPD_3.webp" alt="elfbar" class="slider__image">
                             </div>
                         </div>
                         <img src="./images/cards/arrow.png" alt="" class="arrow-right">
                         <img src="./images/cards/arrow.png" alt="" class="arrow-left">
                     </div>
                     <div class="card__content">
-                        <h4 class="card__heading">Elf bar 1500 lux 5%</h4>
-                        <ul class="card__list">
-                            <li>Аккумулятор - 850мАч</li>
-                            <li>Кол-Во затяжек - 1500</li>
-                            <li>Картридж - 4,8 мл</li>
+                        <h4 class="card__heading">Elf bar 2000 5%</h4>
+                        <ul class="card__list tick-list">
+                            <li>Аккумулятор - 1200мАч</li>
+                            <li>Кол-Во затяжек - 2000</li>
+                            <li>Картридж - 6,5 мл</li>
                             <li>Тип - одноразовые</li>
                         </ul>
                         <p class="card__price">520$</p>
-                        <button class="card__btn btn">расчитать</button>
+                        <div class="card__btn-wrapper">
+                            <a class="card__btn btn" href="#hero">Заказать</a>
+                            <button class="card__btn btn">Наличие</button>
+                        </div>
                     </div>
                 </div>
                 <div class="products__card">
-                    <div class="card__slider-wrapper">
-                        <div class="card__image-wrapper">
+                    <div class="slider-wrapper">
+                        <div class="slider__image-wrapper">
                             <div class="slider">
-                                <img src="./images/cards/elfbar4.jpg" alt="" class="card__image">
-                                <img src="./images/cards/elfbar3.webp" alt="" class="card__image">
-                                <img src="./images/cards/elfbar2.jpg" alt="" class="card__image">
-                                <img src="./images/cards/elfbar1.jpg" alt="" class="card__image">
+                                <img src="./images/cards/2500crystal/elfbar2500crystal_1.webp" alt="elfbar" class="slider__image">
+                                <img src="./images/cards/2500crystal/elfbar2500crystal_2.webp" alt="elfbar" class="slider__image">
+                                <img src="./images/cards/2500crystal/elfbar2500crystal_3.webp" alt="elfbar" class="slider__image">
                             </div>
                         </div>
                         <img src="./images/cards/arrow.png" alt="" class="arrow-right">
                         <img src="./images/cards/arrow.png" alt="" class="arrow-left">
                     </div>
                     <div class="card__content">
-                        <h4 class="card__heading">Elf bar 1500 lux 5%</h4>
-                        <ul class="card__list">
-                            <li>Аккумулятор - 850мАч</li>
-                            <li>Кол-Во затяжек - 1500</li>
-                            <li>Картридж - 4,8 мл</li>
+                        <h4 class="card__heading">Elf bar 2500 crystal 5%</h4>
+                        <ul class="card__list tick-list">
+                            <li>Аккумулятор - 1000мАч</li>
+                            <li>Кол-Во затяжек - 2500</li>
+                            <li>Картридж - 5,5 мл</li>
                             <li>Тип - одноразовые</li>
                         </ul>
                         <p class="card__price">520$</p>
-                        <button class="card__btn btn">расчитать</button>
+                        <div class="card__btn-wrapper">
+                            <a class="card__btn btn" href="#hero">Заказать</a>
+                            <button class="card__btn btn">Наличие</button>
+                        </div>
                     </div>
                 </div>
             </div>
         </section>
-        <section class="contact container">
+        <section class="contact container" id="contact">
             <h2 class="contact__heading">CONTACTS</h2>
             <div class="contact__content">
                 <p class="contact__text">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Voluptatibus consequatur numquam molestias? Soluta fugiat a officia ea sint, nostrum alias dignissimos tempora excepturi, dolores iste adipisci perferendis nulla nisi. Quos velit placeat explicabo sed exercitationem reprehenderit recusandae cumque accusantium consequuntur, similique nostrum corporis provident nam, consectetur alias ab officia vitae.</p>
                 <div class="contact__links-wrapper">
-                    <img src="" alt="" class="contact__image">
-                    <button class="contact__btn btn"></button>
+                    <img src="./images/other/contactTelegram.jpg" alt="" class="contact__image">
+                </div>
+            </div>
+            <button class="contact__btn btn">Связаться с менеджером</button>
+        </section>
+        <section class="comments">
+            <div class="comments__field container">
+
+            </div>
+        </section>
+        <section class="comments" id="comments">
+            <div class="container comments__field">
+                <h2 class="comments__heading">Что наши клиеты говорят о нас:</h2>
+                <div class="comments__slider">
+                    <div class="slider-wrapper">
+                        <div class="slider__image-wrapper">
+                            <div class="slider">
+                                <img src="./images/comments/comment_1.png" alt="" class="slider__image">
+                                <img src="./images/comments/comment_2.png" alt="" class="slider__image">
+                                <img src="./images/comments/comment_3.png" alt="" class="slider__image">
+                            </div>
+                        </div>
+                        <img src="./images/cards/arrow.png" alt="" class="arrow-right">
+                        <img src="./images/cards/arrow.png" alt="" class="arrow-left">
+                    </div>
                 </div>
             </div>
         </section>
     </main>
-    <script src="./js/script.js"></script>
+    <footer>
+        <ul class="list footer__nav">
+            <li class="footer__nav_item"><a href="#subscribe">Subscibe</a></li>
+            <li class="footer__nav_item"><a href="#availability">Availability</a></li>
+            <li class="footer__nav_item"><a href="#contact">Contact us</a></li>
+            <li class="footer__nav_item"><a href="#comments">Comments</a></li>
+            <li class="footer__nav_item">&#169; My own design</li>
+        </ul>
+    </footer>
+    <section class="modal hidden">
+        <div class="modal-wrapper">
+            <div class="modal__window">
+                <img src="./images/other/cancel.png" alt="" class="modal__cancel">
+                <h3 class="modal__heading">Вкусы в наличии:</h3>
+                <ul class="modal__list tick-list">
+                    <li>EROR 404: NOT FOUND</li>
+                </ul>
+            </div>
+        </div>
+    </section>
+    <script defer src="./dist/bundle.js"></script>
 </body>
 </html>
